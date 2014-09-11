@@ -134,7 +134,7 @@ class studentList {
 	long startTime = System.nanoTime();
 	
 	// repeat the process a certain number of times, to make more accurate average measurements.
-	for (int rep=0;rep<1000;rep++) {
+	for (int rep=0;rep<1;rep++) {
 	    
 	    // This is how to generate lists of random IDs. 
 	    // For firstList, we generate 16000 IDs
