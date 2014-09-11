@@ -49,8 +49,16 @@ class studentList {
     
     // Returns the number of students present in both lists L1 and L2
     public static int intersectionSizeNestedLoops(studentList L1, studentList L2) {
-	/* Write your code for question 1 here */
-	return 0;
+    int	intersection =0;
+	for(int x =0; x<L1.numberOfStudents; x++  ){
+		for (int y=0; y< L1.numberOfStudents;y++ ){
+			if(L1.studentID[x]==L2.studentID[y]){
+				intersection++;
+			}
+			
+		}
+	}
+	return intersection;
     }
     
     
@@ -85,12 +93,13 @@ class studentList {
 	/* Write your code for question 2 here */
     int intersection =0;
     Arrays.sort(L2.studentID);
+    int studentCount = L1.numberOfStudents;
     
-    for(int i = 0; i < L1.numberOfStudents; i++)
+    for(int i = 0; i < studentCount; i++)
 		if(myBinarySearch(L2.studentID, L2.numberOfStudents, L1.studentID[i]))
 			intersection++;
 	
-    return intersection;
+    return intersection	;
     }
     
     
@@ -124,7 +133,7 @@ class studentList {
 	long startTime = System.nanoTime();
 	
 	// repeat the process a certain number of times, to make more accurate average measurements.
-	for (int rep=0;rep<2;rep++) {
+	for (int rep=0;rep<1000;rep++) {
 	    
 	    // This is how to generate lists of random IDs. 
 	    // For firstList, we generate 16000 IDs
@@ -134,7 +143,7 @@ class studentList {
 	    secondList=new studentList(16000 , "MATH240 - Discrete Mathematics"); 
 	    
 	    // run the intersection method
-	    int intersection=studentList.intersectionSizeBinarySearch(firstList,secondList);
+	    int intersection=studentList.intersectionSizeNestedLoops(firstList,secondList);
 	    System.out.println("The intersection size is: "+intersection);
 	}
 	
