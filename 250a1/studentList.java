@@ -66,11 +66,12 @@ class studentList {
     // It returns true if the array contains an element equal to ID, and false otherwise.
     public static boolean myBinarySearch(int mySortedArray[], int numberOfStudents, int ID) {
 	/* For question 2, Write your implementation of the binary search algorithm here */
+    	
     	int left = 0;
     	int right = numberOfStudents;
-    	
+    	//
     	while(right > left + 1){
-    		
+    		//checks to see if the check value is less than or greater then the two binarys, splits 
     		int	mid = (left+right)/2;
     	    
     		if(mySortedArray[mid] > ID)
@@ -94,7 +95,7 @@ class studentList {
     int intersection =0;
     Arrays.sort(L2.studentID);
     int studentCount = L1.numberOfStudents;
-    
+    //pipes l1 & l2 into my binarryy search and iterates when returns true
     for(int i = 0; i < studentCount; i++)
 		if(myBinarySearch(L2.studentID, L2.numberOfStudents, L1.studentID[i]))
 			intersection++;
