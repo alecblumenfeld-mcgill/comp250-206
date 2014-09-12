@@ -132,52 +132,32 @@ class studentList {
 	
 	// get the time before starting the intersections
 	long startTime = System.nanoTime();
-	
+	int[] classSizes= {2,4,8,16,32,64,128,256,512,1000,4000,8000,16000,3200,64000,128000,256000,512000,1024000}; 
+	int classPtr =0;
 	// repeat the process a certain number of times, to make more accurate average measurements.
-	for (int rep=0;rep<2;rep++) {
+	for (int rep=0;rep<classSizes.length;rep++) {
 	    
 	    // This is how to generate lists of random IDs. 
 	    // For firstList, we generate 16000 IDs
 	    // For secondList, we generate 16000 IDs
 	    
-	    firstList=new studentList(16000 , "COMP250 - Introduction to Computer Science"); 
-	    secondList=new studentList(16000 , "MATH240 - Discrete Mathematics"); 
+	    firstList=new studentList(classSizes[classPtr] , "COMP250 - Introduction to Computer Science"); 
+	    secondList=new studentList(classSizes[classPtr] , "MATH240 - Discrete Mathematics"); 
 	    
 	    // run the intersection method
 	    int intersection=studentList.intersectionSizeNestedLoops(firstList,secondList);
-	    System.out.println("The intersection size is: "+intersection);
+	   // System.out.println("The intersection size is: "+intersection);
+	    classPtr++;
+		long endTime = System.nanoTime();
+		System.out.println("Running time: "+ (endTime-startTime)/1000.0 + " nanoseconds:  Nested Loops"+"  list size is :"+classSizes[classPtr]);
+
+
 	}
 	
-	// get the time after the intersection
-	long endTime = System.nanoTime();
-	
-	
-	System.out.println("Running time: "+ (endTime-startTime)/1000.0 + " nanoseconds:  Nested Loops");
-	//binarysort
+
 	 startTime = System.nanoTime();
-	
 	// repeat the process a certain number of times, to make more accurate average measurements.
-	for (int rep=0;rep<2;rep++) {
-	    
-	    // This is how to generate lists of random IDs. 
-	    // For firstList, we generate 16000 IDs
-	    // For secondList, we generate 16000 IDs
-	    
-	    firstList=new studentList(16000 , "COMP250 - Introduction to Computer Science"); 
-	    secondList=new studentList(16000 , "MATH240 - Discrete Mathematics"); 
-	    
-	    // run the intersection method
-	    int intersection=studentList.intersectionSizeBinarySearch(firstList,secondList);
-	    System.out.println("The intersection size is: "+intersection);
-	}
-	
-	// get the time after the intersection
-	 endTime = System.nanoTime();
-	
-	
-	System.out.println("Running time: "+ (endTime-startTime)/1000.0 + " nanoseconds: Binary Search");
     }
-    
 }
 
 
