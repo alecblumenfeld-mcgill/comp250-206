@@ -189,15 +189,23 @@ class studentList {
 	    secondList=new studentList(classSizes[classPtr] , "MATH240 - Discrete Mathematics"); 
 	    
 	    // run the intersection method
-	    int intersection=studentList.intersectionSizeMergeAndSort(firstList,secondList);
+	    int intersection=studentList.intersectionSizeNestedLoops(firstList,secondList);
 	   // System.out.println("The intersection size is: "+intersection);
 		long endTime = System.nanoTime();
-		System.out.println("Running time: "+ ((endTime-startTime)/1000.0) + " nanoseconds:  Binary Search"+"--  list size is :"+classSizes[classPtr]);
+		System.out.println( ((endTime-startTime)/1000.0) + " nanoseconds"+"--  list size is :"+classSizes[classPtr]);
 	    classPtr++;
 
 
 	}
-	
+//	long listGenTimeBefore = System.nanoTime();
+//
+//	for (int rep=0;rep<classSizes.length;rep++){
+//	    firstList=new studentList(classSizes[classPtr] , "COMP250 - Introduction to Computer Science"); 
+//	    long listGenTimeAfter = System.nanoTime();
+//	    long listGenTime= (listGenTimeAfter -listGenTimeBefore)*2;
+//	    System.out.println(listGenTime/1000.0  +" nanoseconds   --  list size is :"+classSizes[classPtr]);
+//	    classPtr++;
+//	}
 
 	// repeat the process a certain number of times, to make more accurate average measurements.
     }
