@@ -133,9 +133,10 @@ class studentList {
 	// get the time before starting the intersections
 	int[] classSizes= {2,4,8,16,32,64,128,256,512,1000,4000,8000,16000,32000,64000,128000,256000,512000,1024000}; 
 	int classPtr =0;
+	long startTime = System.nanoTime();
+
 	// repeat the process a certain number of times, to make more accurate average measurements.
 	for (int rep=0;rep<classSizes.length;rep++) {
-		long startTime = System.nanoTime();
 
 	    // This is how to generate lists of random IDs. 
 	    // For firstList, we generate 16000 IDs
