@@ -1,4 +1,5 @@
 import java.io.*;    
+import java.lang.reflect.Array;
 import java.util.*;
 
 class studentList {
@@ -106,13 +107,50 @@ class studentList {
     
     public static int intersectionSizeSortAndParallelPointers(studentList L1, studentList L2) {
 	/* Write your code for question 3 here */
-	return 0;
+    int intersection = 0;
+    Arrays.sort(L1.studentID);
+    Arrays.sort(L2.studentID);
+    int pointerA=0;
+    int pointerB=0;
+    while(pointerA<L1.numberOfStudents&&pointerB<L2.numberOfStudents){
+    	if(L1.studentID[pointerA] == L2.studentID[pointerB]){
+    		intersection++;
+    		pointerA++;
+    		pointerB++;
+    	}
+    	else if(L1.studentID[pointerA] < L2.studentID[pointerB]){
+    		pointerA++;
+    		
+    	}
+    	else{
+    		pointerB++;
+    	}
+    }
+	return intersection;
     }
     
     
     public static int intersectionSizeMergeAndSort(studentList L1, studentList L2) {
-	/* Write your code for question 4 here */
-	return 0;
+	int intersection =0;
+	int[] c = new int[L1.studentID.length+L2.studentID.length];
+	for(int i=0; i< L1.studentID.length-1;i++ ){
+		c[i]=L1.studentID[i];
+	}
+	for(int i=0;i< L2.studentID.length-1; i++){
+		c[L1.studentID.length+i]= L2.studentID[i];
+	}
+	Arrays.sort(c);
+	int pointer =0;
+	while(pointer<c.length-1){
+		if(c[pointer]==c[pointer+1]){
+			intersection++;
+			pointer+=2;
+		}
+		else{
+			pointer++;
+		}
+	}
+	return intersection;
     }
     
     
@@ -151,7 +189,7 @@ class studentList {
 	    secondList=new studentList(classSizes[classPtr] , "MATH240 - Discrete Mathematics"); 
 	    
 	    // run the intersection method
-	    int intersection=studentList.intersectionSizeBinarySearch(firstList,secondList);
+	    int intersection=studentList.intersectionSizeMergeAndSort(firstList,secondList);
 	   // System.out.println("The intersection size is: "+intersection);
 		long endTime = System.nanoTime();
 		System.out.println("Running time: "+ ((endTime-startTime)/1000.0) + " nanoseconds:  Binary Search"+"--  list size is :"+classSizes[classPtr]);
