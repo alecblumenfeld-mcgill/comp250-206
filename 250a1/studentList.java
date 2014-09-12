@@ -134,7 +134,7 @@ class studentList {
 	long startTime = System.nanoTime();
 	
 	// repeat the process a certain number of times, to make more accurate average measurements.
-	for (int rep=0;rep<1;rep++) {
+	for (int rep=0;rep<2;rep++) {
 	    
 	    // This is how to generate lists of random IDs. 
 	    // For firstList, we generate 16000 IDs
@@ -152,7 +152,30 @@ class studentList {
 	long endTime = System.nanoTime();
 	
 	
-	System.out.println("Running time: "+ (endTime-startTime)/1000.0 + " nanoseconds");
+	System.out.println("Running time: "+ (endTime-startTime)/1000.0 + " nanoseconds:  Nested Loops");
+	//binarysort
+	 startTime = System.nanoTime();
+	
+	// repeat the process a certain number of times, to make more accurate average measurements.
+	for (int rep=0;rep<2;rep++) {
+	    
+	    // This is how to generate lists of random IDs. 
+	    // For firstList, we generate 16000 IDs
+	    // For secondList, we generate 16000 IDs
+	    
+	    firstList=new studentList(16000 , "COMP250 - Introduction to Computer Science"); 
+	    secondList=new studentList(16000 , "MATH240 - Discrete Mathematics"); 
+	    
+	    // run the intersection method
+	    int intersection=studentList.intersectionSizeBinarySearch(firstList,secondList);
+	    System.out.println("The intersection size is: "+intersection);
+	}
+	
+	// get the time after the intersection
+	 endTime = System.nanoTime();
+	
+	
+	System.out.println("Running time: "+ (endTime-startTime)/1000.0 + " nanoseconds: Binary Search");
     }
     
 }
