@@ -1,0 +1,104 @@
+intersectionSizeNestedLoops:
+62.205 nanoseconds--  list size is :2
+2144.278 nanoseconds--  list size is :4
+2201.531 nanoseconds--  list size is :8
+2276.813 nanoseconds--  list size is :16
+2388.119 nanoseconds--  list size is :32
+2719.288 nanoseconds--  list size is :64
+3723.388 nanoseconds--  list size is :128
+6882.932 nanoseconds--  list size is :256
+14626.034 nanoseconds--  list size is :512
+17419.019 nanoseconds--  list size is :1000
+33098.655 nanoseconds--  list size is :4000
+57639.637 nanoseconds--  list size is :8000
+150140.898 nanoseconds--  list size is :16000
+521578.437 nanoseconds--  list size is :32000
+1961978.746 nanoseconds--  list size is :64000
+7737377.592 nanoseconds--  list size is :128000
+3.0264358127E7 nanoseconds--  list size is :256000
+1.20123642903E8 nanoseconds--  list size is :512000
+5.12267923034E8 nanoseconds--  list size is :1024000
+
+intersectionSizeBinarySearch:
+447.294 nanoseconds--  list size is :2
+2458.908 nanoseconds--  list size is :4
+2516.028 nanoseconds--  list size is :8
+2630.37 nanoseconds--  list size is :16
+2814.463 nanoseconds--  list size is :32
+3011.305 nanoseconds--  list size is :64
+3491.219 nanoseconds--  list size is :128
+4244.506 nanoseconds--  list size is :256
+5490.298 nanoseconds--  list size is :512
+8523.629 nanoseconds--  list size is :1000
+20853.399 nanoseconds--  list size is :4000
+29486.578 nanoseconds--  list size is :8000
+47810.531 nanoseconds--  list size is :16000
+73296.087 nanoseconds--  list size is :32000
+130733.189 nanoseconds--  list size is :64000
+177642.074 nanoseconds--  list size is :128000
+280619.589 nanoseconds--  list size is :256000
+503745.073 nanoseconds--  list size is :512000
+1036042.066 nanoseconds--  list size is :1024000
+
+intersectionSizeSortAndParallelPointers:
+444.33 nanoseconds--  list size is :2
+2418.403 nanoseconds--  list size is :4
+2483.074 nanoseconds--  list size is :8
+2547.37 nanoseconds--  list size is :16
+2647.027 nanoseconds--  list size is :32
+2894.419 nanoseconds--  list size is :64
+3377.368 nanoseconds--  list size is :128
+4190.249 nanoseconds--  list size is :256
+5450.436 nanoseconds--  list size is :512
+9023.432 nanoseconds--  list size is :1000
+24828.351 nanoseconds--  list size is :4000
+35237.965 nanoseconds--  list size is :8000
+55226.12 nanoseconds--  list size is :16000
+107352.55 nanoseconds--  list size is :32000
+126448.039 nanoseconds--  list size is :64000
+166508.909 nanoseconds--  list size is :128000
+254943.694 nanoseconds--  list size is :256000
+445824.215 nanoseconds--  list size is :512000
+851695.058 nanoseconds--  list size is :1024000
+
+intersectionSizeMergeAndSort:
+447.751 nanoseconds--  list size is :2
+2584.103 nanoseconds--  list size is :4
+2691.664 nanoseconds--  list size is :8
+2865.737 nanoseconds--  list size is :16
+3198.141 nanoseconds--  list size is :32
+3478.308 nanoseconds--  list size is :64
+3822.863 nanoseconds--  list size is :128
+4534.421 nanoseconds--  list size is :256
+5963.061 nanoseconds--  list size is :512
+9535.328 nanoseconds--  list size is :1000
+25328.544 nanoseconds--  list size is :4000
+40393.393 nanoseconds--  list size is :8000
+64514.858 nanoseconds--  list size is :16000
+116477.614 nanoseconds--  list size is :32000
+137029.172 nanoseconds--  list size is :64000
+178584.735 nanoseconds--  list size is :128000
+275300.248 nanoseconds--  list size is :256000
+475648.18 nanoseconds--  list size is :512000
+888531.325 nanoseconds--  list size is :1024000
+
+list generation:
+111.944 nanoseconds   --  list size is :2
+4000.154 nanoseconds   --  list size is :4
+4085.204 nanoseconds   --  list size is :8
+4168.922 nanoseconds   --  list size is :16
+4292.338 nanoseconds   --  list size is :32
+4446.84 nanoseconds   --  list size is :64
+4691.524 nanoseconds   --  list size is :128
+5198.17 nanoseconds   --  list size is :256
+6122.0 nanoseconds   --  list size is :512
+7666.014 nanoseconds   --  list size is :1000
+13846.452 nanoseconds   --  list size is :4000
+23435.536 nanoseconds   --  list size is :8000
+31563.374 nanoseconds   --  list size is :16000
+44113.708 nanoseconds   --  list size is :32000
+52619.332 nanoseconds   --  list size is :64000
+70352.712 nanoseconds   --  list size is :128000
+108039.254 nanoseconds   --  list size is :256000
+190785.002 nanoseconds   --  list size is :512000
+373973.684 nanoseconds   --  list size is :1024000
