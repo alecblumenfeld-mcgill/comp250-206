@@ -52,7 +52,7 @@ class studentList {
     public static int intersectionSizeNestedLoops(studentList L1, studentList L2) {
     int	intersection =0;
 	for(int x =0; x<L1.numberOfStudents; x++  ){
-		for (int y=0; y< L1.numberOfStudents;y++ ){
+		for (int y=0; y< L2.numberOfStudents;y++ ){
 			if(L1.studentID[x]==L2.studentID[y]){
 				intersection++;
 			}
@@ -173,17 +173,17 @@ class studentList {
 	int classPtr =0;
 
 	// repeat the process a certain number of times, to make more accurate average measurements.
-	for (int rep=0;rep<1;rep++) {
+	for (int rep=0;rep<100;rep++) {
 		long startTime = System.nanoTime();
 
 	    // This is how to generate lists of random IDs. 
 	    // For firstList, we generate 16000 IDs
 	    // For secondList, we generate 16000 IDs
-	    firstList=new studentList(400, "COMP250 - Introduction to Computer Science"); 
+	    firstList=new studentList(  1024000 , "COMP250 - Introduction to Computer Science"); 
 	    
 	    //System.out.println(listGenTime);
 
-	    secondList=new studentList(400, "MATH240 - Discrete Mathematics"); 
+	    secondList=new studentList( 32000 , "MATH240 - Discrete Mathematics"); 
 	    
 	    // run the intersection method
 	    int intersection=studentList.intersectionSizeNestedLoops(firstList,secondList);
@@ -195,14 +195,14 @@ class studentList {
 	}
 	long listGenTimeBefore = System.nanoTime();
 
-	for (int rep=0;rep<classSizes.length;rep++){
-		
-	    firstList=new studentList(classSizes[classPtr] , "COMP250 - Introduction to Computer Science"); 
-	    long listGenTimeAfter = System.nanoTime();
-	    long listGenTime= (listGenTimeAfter -listGenTimeBefore)*2;
-	    System.out.println(listGenTime/1000.0 );
-	    classPtr++;
-	}
+//	for (int rep=0;rep<classSizes.length;rep++){
+//		
+//	    firstList=new studentList(classSizes[classPtr] , "COMP250 - Introduction to Computer Science"); 
+//	    long listGenTimeAfter = System.nanoTime();
+//	    long listGenTime= (listGenTimeAfter -listGenTimeBefore)*2;
+//	    System.out.println(listGenTime/1000.0 );
+//	    classPtr++;
+//	}
 
 	// repeat the process a certain number of times, to make more accurate average measurements.
     }
